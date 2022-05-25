@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ticket-admisi-irja" pageWidth="221" pageHeight="141" columnWidth="165" leftMargin="28" rightMargin="28" topMargin="0" bottomMargin="0" uuid="08e3b98b-9429-4527-84e7-ce5d45d2a945">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="cm"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="no_register" class="java.lang.String"/>
+	<field name="nama_pasien" class="java.lang.String"/>
+	<field name="nama_poli" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="16">
+			<textField>
+				<reportElement x="0" y="0" width="158" height="16" uuid="269d4ff6-3cc2-4ba4-b4de-48928ee303bb"/>
+				<textElement textAlignment="Center" markup="none"/>
+				<textFieldExpression><![CDATA[$F{no_register}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="89">
+			<componentElement>
+				<reportElement x="20" y="10" width="137" height="30" uuid="e313cbc5-545b-40cd-aebe-f4afdea9574e"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code39" drawText="false" checksumRequired="false">
+					<jr:codeExpression><![CDATA[$F{no_register}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="50" width="158" height="20" uuid="4a949e1d-c3d9-4143-ac3a-b0db78ce7bb6"/>
+				<textElement textAlignment="Center" markup="none">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_pasien}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="0" y="71" width="158" height="18" uuid="49d17ac3-1556-4b4f-9a75-078e6d9e327b"/>
+				<textElement textAlignment="Center" markup="none">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_poli}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+</jasperReport>
